@@ -1,0 +1,21 @@
+{
+  "name": "polymer-web",
+  "version": "1",
+  "authors": [
+    "Semen Goriachkin <artful.tiger@gmail.com>"
+  ],
+  "description": "Example of Polymer and Java EE",
+  "main": "index.html",
+  "dependencies": {
+    "iron-icons": "polymerelements/iron-icons#1.0.3",
+    "paper-elements": "polymerelements/paper-elements#1.0.3"
+  },
+  "keywords": [
+    "polymer",
+    "example",
+    "web",
+    "java",
+    "javaee"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,53 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="../../bower_components/paper-drawer-panel/paper-drawer-panel.html">
+<link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="../../bower_components/paper-header-panel/paper-header-panel.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-styles">
+<link rel="import" href="../../bower_components/paper-styles/demo-pages.html">
+
+<dom-module id="main-page">
+	<template>
+		<div>
+			<paper-drawer-panel>
+				<paper-header-panel drawer>
+					<paper-toolbar>
+						<div>Application</div>
+					</paper-toolbar>
+					<div>
+						<paper-item>Menu 1</paper-item>
+						<button on-click="toggle1">toggle collapse</button>
+						<iron-collapse id="collapse1">
+							<div>
+								<div>Content goes here...</div>
+							</div>
+						</iron-collapse>
+						<paper-item>Menu 2</paper-item>
+						<iron-collapse>
+							<div>
+								<div>Content goes here...</div>
+							</div>
+						</iron-collapse>
+						<paper-item>Menu 3</paper-item>
+						<iron-collapse>
+							<div>
+								<div>Content goes here...</div>
+							</div>
+						</iron-collapse>
+					</div>
+				</paper-header-panel>
+				<paper-header-panel main>
+					<paper-toolbar>
+						<paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+						<div>Title</div>
+					</paper-toolbar>
+					<div>Main content...</div>
+				</paper-header-panel>
+			</paper-drawer-panel>
+		</div>
+	</template>
+	<script src="main-page.js"></script>
+</dom-module>

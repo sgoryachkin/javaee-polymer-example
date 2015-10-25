@@ -7,8 +7,8 @@
   "description": "Example of Polymer and Java EE",
   "main": "index.html",
   "dependencies": {
-    "iron-icons": "polymerelements/iron-icons#1.0.3",
-    "paper-elements": "polymerelements/paper-elements#1.0.3"
+    "iron-icons": "polymerelements/iron-icons#1.0.4",
+    "paper-elements": "polymerelements/paper-elements#1.0.5"
   },
   "keywords": [
     "polymer",

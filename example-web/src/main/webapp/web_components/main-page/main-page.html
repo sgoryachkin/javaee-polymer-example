@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="../../bower_components/iron-collapse/iron-collapse.html">
 <link rel="import" href="../../bower_components/paper-drawer-panel/paper-drawer-panel.html">
 <link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
@@ -11,32 +12,23 @@
 
 <dom-module id="main-page">
 	<template>
+	    <iron-ajax auto url="/api/main/data" handle-as="json" last-response="{{mainPageData}}"></iron-ajax>
 		<div>
 			<paper-drawer-panel>
 				<paper-header-panel drawer>
 					<paper-toolbar>
-						<div>Application</div>
+						<div>{{mainPageData.hash}}</div>
 					</paper-toolbar>
 					<div>
-						<paper-item>Menu 1</paper-item>
-						<button on-click="toggle1">toggle collapse</button>
-						<iron-collapse id="collapse1">
-							<div>
-								<div>Content goes here...</div>
-							</div>
-						</iron-collapse>
-						<paper-item>Menu 2</paper-item>
-						<iron-collapse>
-							<div>
-								<div>Content goes here...</div>
-							</div>
-						</iron-collapse>
-						<paper-item>Menu 3</paper-item>
-						<iron-collapse>
-							<div>
-								<div>Content goes here...</div>
-							</div>
-						</iron-collapse>
+					    <template is="dom-repeat" items="{{mainPageData.routingItems}}">
+							<paper-item>{{item.name}}</paper-item>
+							<button on-click="toggle1">toggle collapse</button>
+							<iron-collapse id="collapse1">
+								<div>
+									<div>{{item.description}}</div>
+								</div>
+							</iron-collapse>
+						</template>
 					</div>
 				</paper-header-panel>
 				<paper-header-panel main>

@@ -12,7 +12,7 @@
 
 <dom-module id="main-page">
 	<template>
-	    <iron-ajax auto url="/api/main/data" handle-as="json" last-response="{{mainPageData}}"></iron-ajax>
+	    <iron-ajax id="mainAjax" auto url="/api/main/data" handle-as="json" last-response="{{mainPageData}}"></iron-ajax>
 		<div>
 			<paper-drawer-panel>
 				<paper-header-panel drawer>
@@ -34,7 +34,7 @@
 				<paper-header-panel main>
 					<paper-toolbar>
 						<paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
-						<div>Title</div>
+						<div>{{mainPageData.userName}}</div>
 					</paper-toolbar>
 					<div>Main content...</div>
 				</paper-header-panel>

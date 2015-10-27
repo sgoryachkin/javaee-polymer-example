@@ -22,9 +22,9 @@ public class MainPageService {
 		List<RoutingItem> routingItems = Arrays.asList(
 				RoutingItem.of("Home", "home", "Home page"), 
 				RoutingItem.of("Order", "order"),
-				RoutingItem.of("About", "about", "About Page"));
+				RoutingItem.of("About", "about", "About Page "));
 		MainPageData routingData = MainPageData.of(routingItems);
-		routingData.setUserName("Skystar");
+		routingData.setUserName("Skystar" + System.currentTimeMillis() % 1000);
 		routingData.setHash(DtoUtils.hashSumm(routingData));
 		return routingData;
 	}

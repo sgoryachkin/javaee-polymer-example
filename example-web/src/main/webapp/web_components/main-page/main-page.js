@@ -3,7 +3,7 @@
  */
 Polymer({
 	is : 'main-page',
-	toggle1 : function() {
-		this.$.collapse1.toggle();
+	toggleCollapse : function(e) {
+		this.$$('#collapse' + e.model.index).toggle();
 	}
 });

@@ -22,8 +22,8 @@
 					<div>
 					    <template is="dom-repeat" items="{{mainPageData.routingItems}}">
 							<paper-item>{{item.name}}</paper-item>
-							<button on-click="toggle1">toggle collapse</button>
-							<iron-collapse id="collapse1">
+							<button on-click="toggleCollapse">toggle collapse</button>
+							<iron-collapse id="collapse{{index}}">
 								<div>
 									<div>{{item.description}}</div>
 								</div>

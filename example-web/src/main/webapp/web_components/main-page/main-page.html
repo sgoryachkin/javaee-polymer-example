@@ -9,9 +9,16 @@
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../../bower_components/paper-styles">
 <link rel="import" href="../../bower_components/paper-styles/demo-pages.html">
+<link rel="import" href="../../bower_components/more-routing/more-route.html">
+<link rel="import" href="../main-routing/main-routing.html">
+
 
 <dom-module id="main-page">
 	<template>
+		
+		
+
+		
 	    <iron-ajax id="mainAjax" auto url="/api/main/data" handle-as="json" last-response="{{mainPageData}}"></iron-ajax>
 		<div>
 			<paper-drawer-panel>
@@ -36,9 +43,14 @@
 						<paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
 						<div>{{mainPageData.userName}}</div>
 					</paper-toolbar>
-					<div>Main content...</div>
+					<div><main-routing></main-routing></div>
 				</paper-header-panel>
 			</paper-drawer-panel>
+			
+			<!-- Routing pages -->
+
+		    
+			
 		</div>
 	</template>
 	<script src="main-page.js"></script>

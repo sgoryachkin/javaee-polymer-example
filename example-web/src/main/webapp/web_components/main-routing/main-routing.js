@@ -1,0 +1,6 @@
+/**
+ * 
+ */
+Polymer({
+	is : 'main-routing'
+});

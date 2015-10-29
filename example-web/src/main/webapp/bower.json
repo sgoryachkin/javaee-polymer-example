@@ -9,7 +9,9 @@
   "dependencies": {
     "iron-icons": "polymerelements/iron-icons#1.0.4",
     "iron-ajax": "polymerelements/iron-ajax#1.0.6",
-    "paper-elements": "polymerelements/paper-elements#1.0.5"
+    "iron-pages": "polymerelements/iron-pages#1.0.3",
+    "paper-elements": "polymerelements/paper-elements#1.0.5",
+    "more-routing": "Polymore/more-routing"
   },
   "keywords": [
     "polymer",

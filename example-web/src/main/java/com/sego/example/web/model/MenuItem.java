@@ -3,7 +3,7 @@ package com.sego.example.web.model;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class RoutingItem extends AbstractBaseDto {
+public class MenuItem extends AbstractBaseDto {
 	private static final long serialVersionUID = -4013144917432436685L;
 
 	private String name;
@@ -13,17 +13,17 @@ public class RoutingItem extends AbstractBaseDto {
 	private String description;
 	
 	
-	public static RoutingItem of (String name, String token) {
-		RoutingItem routingItem = new RoutingItem();
-		routingItem.setName(name);
-		routingItem.setToken(token);
-		return routingItem;
+	public static MenuItem of (String name, String token) {
+		MenuItem menuItem = new MenuItem();
+		menuItem.setName(name);
+		menuItem.setToken(token);
+		return menuItem;
 	}
 	
-	public static RoutingItem of (String name, String token, String description) {
-		RoutingItem routingItem = RoutingItem.of(name, token);
-		routingItem.setDescription(description);
-		return routingItem;
+	public static MenuItem of (String name, String token, String description) {
+		MenuItem menuItem = MenuItem.of(name, token);
+		menuItem.setDescription(description);
+		return menuItem;
 	}
 	
 	public String getName() {

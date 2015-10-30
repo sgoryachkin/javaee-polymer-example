@@ -1,13 +1,17 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/iron-icons/communication-icons.html">
 <link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="../../bower_components/iron-collapse/iron-collapse.html">
 <link rel="import" href="../../bower_components/paper-drawer-panel/paper-drawer-panel.html">
 <link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
 <link rel="import" href="../../bower_components/paper-header-panel/paper-header-panel.html">
 <link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item-body.html">
+<link rel="import" href="../../bower_components/paper-item/paper-icon-item.html">
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="../../bower_components/paper-styles">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../bower_components/paper-styles/demo-pages.html">
 <link rel="import" href="../../bower_components/more-routing/more-route.html">
 <link rel="import" href="../main-routing/main-routing.html">
@@ -15,11 +19,7 @@
 
 <dom-module id="main-page">
 	<template>
-		
-		
-
-		
-	    <iron-ajax id="mainAjax" auto url="/api/main/data" handle-as="json" last-response="{{mainPageData}}"></iron-ajax>
+		<iron-ajax id="mainAjax" auto url="/api/main/data" handle-as="json" last-response="{{mainPageData}}"></iron-ajax>
 		<div>
 			<paper-drawer-panel>
 				<paper-header-panel drawer>
@@ -27,12 +27,24 @@
 						<div>{{mainPageData.hash}}</div>
 					</paper-toolbar>
 					<div>
-					    <template is="dom-repeat" items="{{mainPageData.routingItems}}">
-							<paper-item>{{item.name}}</paper-item>
-							<button on-click="toggleCollapse">toggle collapse</button>
+						<template is="dom-repeat" items="{{mainPageData.menuCategoryItems}}">
+							<paper-icon-item on-click="toggleCollapse">
+								<iron-icon icon="communication:phone" item-icon></iron-icon>
+								<paper-item-body two-line>
+									<div>{{item.name}}</div>
+									<div secondary>{{item.name}}</div>
+								</paper-item-body>
+							</paper-icon-item>
 							<iron-collapse id="collapse{{index}}">
 								<div>
-									<div>{{item.description}}</div>
+									<template is="dom-repeat" items="{{item.menuItems}}">
+										<paper-item>
+											<paper-item-body two-line>
+												<div>{{item.name}}</div>
+												<div secondary>{{item.description}}</div>
+											</paper-item-body>
+										</paper-item>
+									</template>
 								</div>
 							</iron-collapse>
 						</template>
@@ -43,14 +55,16 @@
 						<paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
 						<div>{{mainPageData.userName}}</div>
 					</paper-toolbar>
-					<div><main-routing></main-routing></div>
+					<div>
+						<main-routing></main-routing>
+					</div>
 				</paper-header-panel>
 			</paper-drawer-panel>
-			
+
 			<!-- Routing pages -->
 
-		    
-			
+
+
 		</div>
 	</template>
 	<script src="main-page.js"></script>

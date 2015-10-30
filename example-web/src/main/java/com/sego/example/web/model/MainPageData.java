@@ -16,16 +16,16 @@ public class MainPageData extends AbstractBaseDto {
 	/**
 	 * Routing data for menu panel in main page
 	 */
-	private List<RoutingItem> routingItems;
+	private List<MenuCategoryItem> menuCategoryItems;
 	
 	/**
 	 * HashCode
 	 */
 	private int hash;
 	
-	public static MainPageData of(List<RoutingItem> items){
+	public static MainPageData of(List<MenuCategoryItem> menuCategoryItems){
 	    MainPageData routingData = new MainPageData();
-	    routingData.setRoutingItems(items);
+	    routingData.setMenuCategoryItems(menuCategoryItems);
 	    return routingData;
 	}
 
@@ -45,16 +45,13 @@ public class MainPageData extends AbstractBaseDto {
 		this.hash = hash;
 	}
 
-
-
-	public List<RoutingItem> getRoutingItems() {
-		return routingItems;
+	public List<MenuCategoryItem> getMenuCategoryItems() {
+		return menuCategoryItems;
 	}
 
-
-
-	public void setRoutingItems(List<RoutingItem> routingItems) {
-		this.routingItems = routingItems;
+	public void setMenuCategoryItems(List<MenuCategoryItem> menuCategoryItems) {
+		this.menuCategoryItems = menuCategoryItems;
 	}
+
 
 }

@@ -14,6 +14,8 @@
 <link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../bower_components/paper-styles/demo-pages.html">
 <link rel="import" href="../../bower_components/more-routing/more-route.html">
+
+<link rel="import" href="../main-menu/main-menu.html">
 <link rel="import" href="../main-routing/main-routing.html">
 
 
@@ -27,27 +29,7 @@
 						<div>{{mainPageData.hash}}</div>
 					</paper-toolbar>
 					<div>
-						<template is="dom-repeat" items="{{mainPageData.menuCategoryItems}}">
-							<paper-icon-item on-click="toggleCollapse">
-								<iron-icon icon="communication:phone" item-icon></iron-icon>
-								<paper-item-body two-line>
-									<div>{{item.name}}</div>
-									<div secondary>{{item.name}}</div>
-								</paper-item-body>
-							</paper-icon-item>
-							<iron-collapse id="collapse{{index}}">
-								<div>
-									<template is="dom-repeat" items="{{item.menuItems}}">
-										<paper-item>
-											<paper-item-body two-line>
-												<div>{{item.name}}</div>
-												<div secondary>{{item.description}}</div>
-											</paper-item-body>
-										</paper-item>
-									</template>
-								</div>
-							</iron-collapse>
-						</template>
+						<main-menu menu-data="{{mainPageData.menuCategoryItems}}"></main-menu>
 					</div>
 				</paper-header-panel>
 				<paper-header-panel main>
@@ -60,11 +42,6 @@
 					</div>
 				</paper-header-panel>
 			</paper-drawer-panel>
-
-			<!-- Routing pages -->
-
-
-
 		</div>
 	</template>
 	<script src="main-page.js"></script>

@@ -1,6 +1,11 @@
 /**
- * 
+ *
  */
 Polymer({
-	is : 'main-routing'
+	is : 'main-routing',
+
+	handlePageSelected: function() {
+			console.log(e);
+			alert('Ow!');
+	}
 });

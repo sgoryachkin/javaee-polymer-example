@@ -12,7 +12,10 @@
 
 <dom-module id="page-about">
 	<template>
-	  <div>About page</div>
+		<iron-ajax id="aboutAjax" auto url="/api/about/data" handle-as="json" last-response="{{aboutPageData}}"></iron-ajax>
+		<span>About page</span>
+		<span>{{aboutPageData.version}}</span>
+		<span>{{aboutPageData.text}}</span>
 	</template>
 	<script src="page-about.js"></script>
 </dom-module>

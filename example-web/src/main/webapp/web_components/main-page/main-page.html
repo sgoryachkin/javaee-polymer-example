@@ -14,6 +14,8 @@
 <link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../bower_components/paper-styles/demo-pages.html">
 <link rel="import" href="../../bower_components/more-routing/more-route.html">
+<link rel="import" href="../../bower_components/more-routing/more-route-selector.html">
+<link rel="import" href="../../bower_components/more-routing/more-routing-config.html">
 
 <link rel="import" href="../main-menu/main-menu.html">
 <link rel="import" href="../main-routing/main-routing.html">
@@ -22,6 +24,12 @@
 <dom-module id="main-page">
 	<template>
 		<iron-ajax id="mainAjax" auto url="/api/main/data" handle-as="json" last-response="{{mainPageData}}"></iron-ajax>
+		<!-- Declare config -->
+		<more-routing-config driver="hash"></more-routing-config>
+		<!-- Declare routes -->
+		<more-route name="home" path="/home"></more-route>
+		<more-route name="about" path="/about"></more-route>
+
 		<div>
 			<paper-drawer-panel>
 				<paper-header-panel drawer>

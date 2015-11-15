@@ -9,6 +9,8 @@
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../bower_components/paper-styles/demo-pages.html">
+<link rel="import" href="../../bower_components/more-routing/more-route-selector.html">
+<link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
 
 <dom-module id="main-menu">
 	<template>
@@ -23,14 +25,18 @@
 				</paper-icon-item>
 				<iron-collapse id="collapse{{index}}">
 					<div>
-						<template is="dom-repeat" items="{{item.menuItems}}">
-							<paper-item>
-								<paper-item-body two-line>
-									<div>{{item.name}}</div>
-									<div secondary>{{item.description}}</div>
-								</paper-item-body>
-							</paper-item>
-						</template>
+						<more-route-selector>
+							<iron-selector>
+								<template is="dom-repeat" items="{{item.menuItems}}">
+									<paper-item on-tap="handleItemClick" route$="{{item.token}}">
+										<paper-item-body two-line>
+											<div>{{item.name}}</div>
+											<div secondary>{{item.description}}</div>
+										</paper-item-body>
+									</paper-item>
+								</template>
+							</iron-selector>
+						</more-route-selector>
 					</div>
 				</iron-collapse>
 			</template>

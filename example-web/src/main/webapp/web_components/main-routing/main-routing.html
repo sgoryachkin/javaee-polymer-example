@@ -8,25 +8,21 @@
 
 <dom-module id="main-routing">
 	<template>
-		<!-- Declare config -->
-		<more-routing-config driver="hash"></more-routing-config>
-		<!-- Declare routes -->
-		<more-route name="home" path="/home"></more-route>
-		<more-route name="about" path="/about"></more-route>
+
 		<!-- Declare pages -->
 		<more-route-selector selectedParams="{{params}}">
-		<iron-pages>
-			<section route="/">
-	      		This is the index.
-	    	</section>
-			<section route="home">
-		    	<page-home></page-home>
-		   	</section>
-		   	<section route="about">
-	        	<page-about></page-about>
-	        </section>
-	        </iron-pages>
-        </more-route-selector>
+			<iron-pages>
+				<section route="/">
+					This is the index.
+				</section>
+				<section route="home">
+					<page-home></page-home>
+				</section>
+				<section route="about">
+					<page-about></page-about>
+				</section>
+			</iron-pages>
+		</more-route-selector>
 	</template>
 	<script src="main-routing.js"></script>
 </dom-module>

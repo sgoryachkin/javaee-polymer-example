@@ -1,7 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../../bower_components/more-routing/more-route-selector.html">
-<link rel="import" href="../../bower_components/more-routing/more-routing-config.html">
 <link rel="import" href="../page-home/page-home.html">
 <link rel="import" href="../page-about/page-about.html">
 
@@ -10,19 +9,20 @@
 	<template>
 
 		<!-- Declare pages -->
-		<more-route-selector selectedParams="{{params}}">
+		<more-route-selector id="routeSelectorPage" selectedParams="{{params}}">
 			<iron-pages>
-				<section route="/">
-					This is the index.
-				</section>
-				<section route="home">
-					<page-home></page-home>
+				<section route="order">
+					<div>Order</div>
 				</section>
 				<section route="about">
 					<page-about></page-about>
 				</section>
+				<section route="/">
+					<page-home></page-home>
+				</section>
 			</iron-pages>
 		</more-route-selector>
+
 	</template>
 	<script src="main-routing.js"></script>
 </dom-module>

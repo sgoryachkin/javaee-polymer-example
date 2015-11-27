@@ -10,8 +10,9 @@
     "iron-icons": "polymerelements/iron-icons#1.0.4",
     "iron-ajax": "polymerelements/iron-ajax#1.0.6",
     "iron-pages": "polymerelements/iron-pages#1.0.3",
+    "iron-selector": "sgoryachkin/iron-selector",
     "paper-elements": "polymerelements/paper-elements#1.0.5",
-    "more-routing": "Polymore/more-routing"
+    "more-routing": "Compufreak345/more-routing#1.0.2"
   },
   "keywords": [
     "polymer",

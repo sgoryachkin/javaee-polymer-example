@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 Polymer({
 	is : 'page-home',
@@ -13,5 +13,9 @@ Polymer({
 
 		  detached: function() {
 		    console.log(this.localName + '#' + this.id + ' was detached');
-		  }
+		  },
+			
+			ready: function() {
+				console.log(this.localName + '#' + this.id + ' was ready');
+			}
 });

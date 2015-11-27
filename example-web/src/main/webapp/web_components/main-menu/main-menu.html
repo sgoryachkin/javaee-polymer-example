@@ -7,8 +7,6 @@
 <link rel="import" href="../../bower_components/paper-item/paper-item-body.html">
 <link rel="import" href="../../bower_components/paper-item/paper-icon-item.html">
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
-<link rel="import" href="../../bower_components/paper-styles/demo-pages.html">
 <link rel="import" href="../../bower_components/more-routing/more-route-selector.html">
 <link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
 
@@ -25,10 +23,10 @@
 				</paper-icon-item>
 				<iron-collapse id="collapse{{index}}">
 					<div>
-						<more-route-selector>
-							<iron-selector>
-								<template is="dom-repeat" items="{{item.menuItems}}">
-									<paper-item on-tap="handleItemClick" route$="{{item.token}}">
+						<more-route-selector id="routeSelector{{index}}" selectedParams="{{params}}">
+							<iron-selector attr-for-selected="route">
+								<template is="dom-repeat" items="[[item.menuItems]]">
+									<paper-item route$="{{item.token}}">
 										<paper-item-body two-line>
 											<div>{{item.name}}</div>
 											<div secondary>{{item.description}}</div>

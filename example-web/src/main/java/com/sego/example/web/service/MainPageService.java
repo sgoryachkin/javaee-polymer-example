@@ -18,7 +18,7 @@ import com.sego.example.web.service.util.DtoUtils;
 public class MainPageService {
 	
 	private static List<MenuItem> firstItems = Arrays.asList(
-			MenuItem.of("Home", "home", "Home page"), 
+			MenuItem.of("Home", "/", "Home page"), 
 			MenuItem.of("Order", "order"));
 	private static List<MenuItem> secondItems = Arrays.asList(
 			MenuItem.of("About", "about", "About Page "));

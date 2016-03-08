@@ -7,11 +7,11 @@
   "description": "Example of Polymer and Java EE",
   "main": "index.html",
   "dependencies": {
-    "iron-icons": "polymerelements/iron-icons#1.0.4",
-    "iron-ajax": "polymerelements/iron-ajax#1.0.6",
-    "iron-pages": "polymerelements/iron-pages#1.0.3",
-    "iron-selector": "sgoryachkin/iron-selector",
-    "paper-elements": "polymerelements/paper-elements#1.0.5",
+    "iron-icons": "polymerelements/iron-icons#1.1.3",
+    "iron-ajax": "polymerelements/iron-ajax#1.2.0",
+    "iron-pages": "polymerelements/iron-pages#1.0.7",
+    "iron-selector": "polymerelements/iron-selector#1.2.4",
+    "paper-elements": "polymerelements/paper-elements#1.0.7",
     "more-routing": "Compufreak345/more-routing#1.0.2"
   },
   "keywords": [
